@@ -1,0 +1,280 @@
+/* 
+    #fcf1f1 - background
+    #f9e0ae - circle
+    #835050 - pot
+    #799351 - cactus
+    #335d2d - caclus lines
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 
+  ===============
+    Background
+  ===============
+*/
+.canvas {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fcf1f1;
+  width: 100%;
+  height: 100vh;
+}
+
+.circle {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 80vmin;
+  height: 80vmin;
+  border-radius: 50%;
+  background: #f9e0ae;
+}
+
+/* 
+  =============
+    Pot Head
+  =============
+*/
+
+.pot {
+  position: absolute;
+  border-bottom: 25vmin solid #835050;
+  border-left: 7vmin solid transparent;
+  border-right: 7vmin solid transparent;
+  height: 0px;
+  width: 50vmin;
+  bottom: 10vmin;
+  transform: rotate(180deg);
+  border-radius: 3vmin;
+}
+
+.pot::after {
+  content: "";
+  position: absolute;
+  width: 36vmin;
+  height: 1.25vmin;
+  background: #333;
+  transform: rotate(-180deg);
+}
+
+.eyes {
+  position: absolute;
+  width: 5vmin;
+  height: 5vmin;
+  background: #111;
+  border-radius: 50%;
+  bottom: -15vmin;
+  right: 22.5vmin;
+  box-shadow: 13vmin 0 #111;
+  animation: blink 1s infinite;
+}
+
+/* 
+  ==============================
+    Adding Blinking Animation
+  ==============================
+*/
+
+@keyframes blink {
+  0% {
+    transform: scale(1, 0.1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+.cheecks {
+  position: absolute;
+  width: 5vmin;
+  height: 2vmin;
+  top: 9vmin;
+  left: 5vmin;
+  background: crimson;
+  border-radius: 50%;
+  opacity: 0.7;
+  box-shadow: 20vmin 0 crimson;
+  z-index: -1;
+}
+
+/* 
+  ============
+    Cacti-1
+  ============
+*/
+
+.mouth {
+  position: absolute;
+  width: 5vmin;
+  height: 4vmin;
+  top: 8vmin;
+  left: 15vmin;
+  border-radius: 50%;
+  background: transparent;
+  border-top: 1vmin solid #111;
+}
+
+.cacti {
+  position: absolute;
+  width: 17vmin;
+  height: 35vmin;
+  top: 15vmin;
+  left: 25vmin;
+  background: #799351;
+  border-radius: 45%;
+  border: 1vmin solid #111;
+}
+
+.cacti::before {
+  content: "";
+  position: absolute;
+  width: 5vmin;
+  height: 35vmin;
+  left: 6vmin;
+  background: transparent;
+  border-radius: 50%;
+  border-right: 1vmin solid #335d2d;
+}
+
+.cacti::after {
+  content: "";
+  position: absolute;
+  width: 5vmin;
+  height: 35vmin;
+  right: 6vmin;
+  background: transparent;
+  border-radius: 50%;
+  border-left: 1vmin solid #335d2d;
+}
+
+/* 
+  ============
+    Cacti-2
+  ============
+*/
+
+.cacti-small {
+  position: absolute;
+  width: 17vmin;
+  height: 22vmin;
+  top: 27vmin;
+  right: 28vmin;
+  background: #799351;
+  border: 1vmin solid #000;
+  border-radius: 45%;
+}
+
+.cacti-small::before {
+  content: "";
+  position: absolute;
+  width: 5vmin;
+  height: 20vmin;
+  left: 6vmin;
+  background: transparent;
+  border-radius: 50%;
+  border-right: 1vmin solid #335d2d;
+}
+
+.cacti-small::after {
+  content: "";
+  position: absolute;
+  width: 5vmin;
+  height: 20vmin;
+  right: 5vmin;
+  right: 6vmin;
+  background: transparent;
+  border-radius: 50%;
+  border-left: 1vmin solid #335d2d;
+}
+
+/* 
+  ===================
+    Pricks Cacti-1
+  ===================
+*/
+
+.pricks {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 1vmin solid transparent;
+  border-right: 1vmin solid transparent;
+  border-bottom: 7vmin solid #335d2d;
+  transform: rotate(-45deg);
+}
+
+.pricks::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 5vmin;
+  left: 9vmin;
+  border-left: 1vmin solid transparent;
+  border-right: 1.5vmin solid transparent;
+  border-bottom: 7vmin solid #335d2d;
+  transform: rotate(90deg);
+}
+
+.pricks::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 7vmin;
+  left: -10vmin;
+  border-left: 1vmin solid transparent;
+  border-right: 2vmin solid transparent;
+  border-bottom: 8vmin solid #335d2d;
+}
+
+/* 
+  ===================
+    Pricks Cacti-2
+  ===================
+*/
+
+.pricks-right {
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: -1vmin;
+  border-left: 1vmin solid transparent;
+  border-right: 1vmin solid transparent;
+  border-bottom: 7vmin solid #335d2d;
+  transform: rotate(-45deg);
+}
+
+.pricks-right::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 10vmin;
+  left: 8vmin;
+  border-left: 1vmin solid transparent;
+  border-right: 1vmin solid transparent;
+  border-bottom: 7vmin solid #335d2d;
+  transform: rotate(90deg);
+}
+
+.pricks-right::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 2vmin;
+  left: 5vmin;
+  border-left: 1vmin solid transparent;
+  border-right: 1vmin solid transparent;
+  border-bottom: 9vmin solid #335d2d;
+  transform: rotate(45deg);
+}
